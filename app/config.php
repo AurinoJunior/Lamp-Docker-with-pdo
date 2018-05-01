@@ -1,13 +1,12 @@
 <?php
+  $dsn = "mysql:host=dbmysql;dbname=teste";
+  $dbuser = "dev";
+  $dbpass = "dev123";
 
-	$dsn = "mysql:dbname=teste;host=localhost";
-	$dbuser = "root";
-	$dbpass = "root";
 
-	try{
-		$pdo = new PDO($dsn,$dbuser, $dbpass);
-		echo "Conectado";
-	}catch (PDOException $e){
-		echo "Nao foi possivel conectar.<br>";
-		echo $e->getMessage();
-	}
+  try{
+      $pdo = new PDO($dsn,$dbuser, $dbpass);
+      echo "Conectado!";
+  }catch (PDOException $e){
+      echo $e->getMessage();
+  }
